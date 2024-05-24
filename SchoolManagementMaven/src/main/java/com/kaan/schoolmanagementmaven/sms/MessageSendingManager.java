@@ -12,15 +12,15 @@ import com.twilio.type.PhoneNumber ;
  * 
  */
 public class MessageSendingManager implements IMessageSendingManager{
-    private static final String ACCOUNT_SID = "ACc572315c592ae95b2835bd61ea84a2c4" ;
-    private static final String AUTH_TOKEN = "ad1829ac85c0daa6c05f79f24963d120";
+    private static final String ACCOUNT_SID = "Your Account ID" ;
+    private static final String AUTH_TOKEN = "Your Token";
     private final PhoneNumber virtualPhoneNumber ;
     
     private static IMessageSendingManager messageSendingObject ;
     
     private MessageSendingManager () {
         Twilio.init(ACCOUNT_SID , AUTH_TOKEN) ;
-        virtualPhoneNumber = new PhoneNumber ("+16507535021") ;
+        virtualPhoneNumber = new PhoneNumber ("Phone Number") ;
     }
     
     public static IMessageSendingManager getInstance () {
